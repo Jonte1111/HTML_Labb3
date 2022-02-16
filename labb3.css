@@ -42,7 +42,18 @@ aside>a>img{
     width: 100%;
 }
 
-@media (min-width: 400px) {
+p {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+@media (min-width: 801px){
+    body {
+        background-color: blueviolet;
+    }
+}
+
+@media (max-width: 800px) {
     body {
         background-color: bisque;
     }
@@ -56,3 +67,4 @@ aside>a>img{
         display: none;
     }
 }
+
