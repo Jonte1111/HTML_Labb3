@@ -1,5 +1,5 @@
 * {
-    box-sizing:border-box;
+    box-sizing:content-box;
 }
 
 h1 {
@@ -10,15 +10,19 @@ header {
     width: 100%;
 }
 nav {
+    padding: 0;
+    margin: 0;
     width: 100%;
 }
 nav>ul {
-    padding-left: 0;
+    
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
     width: 100%;
 }
 nav>ul>li {
-    
-    display: block;
     background-color:aqua;
     text-align: center;
 }
@@ -33,7 +37,6 @@ figure {
 
 .ekorre {
     width:100%;
-    
 }
 aside {
     width:50%;
@@ -42,17 +45,47 @@ aside>a>img{
     width: 100%;
 }
 
-@media (min-width: 400px) {
+
+
+
+@media (max-width: 400px) {
     body {
         background-color: bisque;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    nav>ul>li {
+        display: block;
     }
 }
 
-@media (max-width: 399px) {
+@media (min-width: 401px) {
     body {
         background-color:azure;
+        margin-left: 0;
+        margin-right: 0;
     }
     aside {
         display: none;
+    }
+    nav>ul>li {
+        float: left; /*Används för att det sista blocket i listan inte skall hamna under det första när sidan minskar*/
+        width: 33.33%;
+        display: inline-block; /*Horisontell meny*/
+    }
+}
+@media (min-width: 801px){
+    body {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    nav>ul>li {
+        float: left; /*Används för att det sista blocket i listan inte skall hamna under det första när sidan minskar*/
+        width: 33.33%;
+        display: inline-block;
+        
+    }
+    body {
+        background-color: blueviolet;
     }
 }
