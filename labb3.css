@@ -39,10 +39,13 @@ figure {
     width:100%;
 }
 aside {
-    width:50%;
+    width:45%;
 }
 aside>a>img{
     width: 100%;
+}
+.video {
+    border-style: none;
 }
 
 
@@ -57,6 +60,12 @@ aside>a>img{
     nav>ul>li {
         display: block;
     }
+    aside {
+        display:none;
+    }
+    .video {
+        width: 100%;
+    }
 }
 
 @media (min-width: 401px) {
@@ -65,13 +74,16 @@ aside>a>img{
         margin-left: 0;
         margin-right: 0;
     }
-    aside {
-        display: none;
-    }
+    
     nav>ul>li {
         float: left; /*Används för att det sista blocket i listan inte skall hamna under det första när sidan minskar*/
         width: 33.33%;
         display: inline-block; /*Horisontell meny*/
+    }
+    .video {
+        width: 50%;
+        float: right; /*Flyttar videon till höger bredvid aside*/
+        padding-top: 10%;
     }
 }
 @media (min-width: 801px){
